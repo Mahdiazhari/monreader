@@ -15,7 +15,7 @@ from uvicorn import run
 import os
 
 app = FastAPI()
-model_dir = "monreader_mobilenetv2_finetuned.h5"
+model_dir = "./model_weights/monreader_mobilenetv2_finetuned.h5"
 
 def f1_metric(y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
